@@ -2,8 +2,40 @@
 	"name": "arsd-official",
 	"targetType": "none",
 	"sourcePaths": ["."],
+	"importPaths": ["."],
 	"description": "A container of various subpackages that do lots of different things. You should use one of the subpackages instead of the main package in most cases, but you can try the complete package if you get duplicated dependency issues.",
 	"license":"BSL-1.0",
+	"configurations": [
+		{
+			"name": "unittest",
+			"targetType": "library",
+			"excludedSourceFiles": [
+				"audio.d",
+				"curl.d",
+				"dbus.d",
+				"engine.d",
+				"htmlwidget.d",
+				"http2.d",
+				"image.d",
+				"jpeg.d",
+				"libssh2.d",
+				"mangle.d",
+				"minigui.d",
+				"minigui_addons/*",
+				"minigui_xml.d",
+				"mysql.d",
+				"oauth.d",
+				"postgres.d",
+				"rpc.d",
+				"rtud.d",
+				"screen.d",
+				"script.d",
+				"sqlite.d",
+				"sslsocket.d",
+				"wmutil.d"
+			]
+		},
+	],
 	"subPackages": [
 		{
 			"name": "simpledisplay",
